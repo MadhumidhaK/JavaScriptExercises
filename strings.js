@@ -5,7 +5,7 @@ var output = input.split(" ").map((word, index) => {
     var value;
     if(index%2 == 0){
         if(word.charAt(0) === "#"){
-            type = "intnet";
+            type = "intent";
         }else if(word.charAt(0) == "$"){
             type = "entity";
         }
