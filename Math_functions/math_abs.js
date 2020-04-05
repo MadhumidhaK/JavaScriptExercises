@@ -1,4 +1,7 @@
 function newAbs(num){
+    if(typeof num !== "number"){
+        return NaN
+    }
     return  num >= 0 ? num : -num; 
 }
 
