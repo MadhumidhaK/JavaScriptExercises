@@ -23,8 +23,10 @@ function T(){
 
 fn = cond([equals(0), always('Water freezes at 0°C')], 
         [equals(100), always('Water boils at 100°C')],
+        [equals(50), always('Water temperature is at 50°C')],
         [T, temp => 'nothing special happens at ' + temp + '°C'])
 
-console.log(fn(109))
-console.log(fn(100))
-console.log(fn(0))
+console.log(fn(109));
+console.log(fn(100));
+console.log(fn(50));
+console.log(fn(0));
