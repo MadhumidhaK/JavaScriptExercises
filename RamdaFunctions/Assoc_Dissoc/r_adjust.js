@@ -1,3 +1,8 @@
+/**
+ * Applies a function to the value at the given index of an array, returning a new copy of the array with the 
+ * element at the given index replaced with the result of the function application.
+ */
+
 function adjust(index,fun,arr){
     var length = arr.length;
     if(index >= length || index < -length){
@@ -14,7 +19,7 @@ function adjust(index,fun,arr){
 }
 
 
-// var r = adjust(5, toUpper, ['a', 'b', 'e', 'd']);
+// var r = adjust(-5, toUpper, ['a', 'b', 'e', 'd', 'f', 'g']);
 
 // console.log(r);
 

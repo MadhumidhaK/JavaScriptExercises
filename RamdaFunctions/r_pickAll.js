@@ -1,3 +1,12 @@
+/*
+*    names - an array of String property names to copy onto a new object
+    obj- The object to copy from
+    
+    Returns Object A new object with only properties from `names` on it
+
+    this includes a key: undefined pair for properties that don't exist.
+ */
+
 function  pickAll(names, obj){
     var result = {};
     var length = names.length;
@@ -21,3 +30,4 @@ var arr1 = 'abcdefghijklmnopqrstuvwxyz'.split('');
 var arr2 = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('')
 arr1 = arr1.concat(arr2)
 console.log(pickAll(arr1, {a: 2, b: 3}))
+console.log(pickAll(['a', 'd'], {a: 1, b: 2, c: 3, d: 4}));

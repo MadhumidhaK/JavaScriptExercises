@@ -1,3 +1,10 @@
+/**
+ *  path-the path to set
+    val-The new value
+    obj-The object to clone
+    Returns Object A new object equivalent to the original except along the specified path. 
+ */
+
 var has = require('./helper').has;
 var isNull = require('./helper').isNull;
 var isArray = require('./helper').isArray;
@@ -13,9 +20,11 @@ function assocPath(path, val, obj){
         var nextObj = !isNull(obj) && has(obj,idx) ? obj[idx] : typeof path[1] === "number" ? [] : {};
         var val = assocPath(path.slice(1), val, nextObj);
     }
+    
 
     if(typeof idx === "number" && isArray(obj)){
-        var arr = [].concat(obj);
+        // var arr = [].concat(obj);
+        var arr = obj;
         arr[idx] = val;
         return arr;
     }
@@ -25,7 +34,7 @@ function assocPath(path, val, obj){
 }
 
 var oldObj = {c: {a: { ac : 50}}};
-var resultObj = assocPath(['c', 'a', 'c', 2,'s'], 42, oldObj);
+var resultObj = assocPath(['c', 'a', 'c', 2,'s', 1], 42, oldObj);
 console.log(resultObj);
 console.log(resultObj.c.a.c)
 console.log(oldObj)

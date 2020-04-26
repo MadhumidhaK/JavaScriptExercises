@@ -1,3 +1,8 @@
+/**
+ *  pairs- A list of [predicate, transformer]
+    Returns function
+ */
+
 function cond(...funPairs){
     return function(val){
         var fun = funPairs.find(pair => pair[0](val) === true);

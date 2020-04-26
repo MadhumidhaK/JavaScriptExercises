@@ -6,7 +6,11 @@ function has(obj,prop){
 
 
 function isNull(obj){
-    return obj === null || obj === undefined
+    isnull = obj === null || obj === undefined;
+    // console.log('isNull');
+    // console.log(obj)
+    // console.log(isnull);
+    return isnull;
 }
 
 
@@ -15,7 +19,7 @@ function isArray(obj){
 }
 
 function always(val){
-    return function(a){
+    return function(){
         return val;
     }
 }

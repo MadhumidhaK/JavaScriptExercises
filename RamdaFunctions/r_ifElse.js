@@ -1,3 +1,7 @@
+/**
+ * Creates a function that will process either the onTrue or the onFalse function 
+ * depending upon the result of the condition predicate.
+ */
 function ifElse(fun, onTrue, onFalse){
     return function(val){
         if(fun(val)){

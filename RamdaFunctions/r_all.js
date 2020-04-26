@@ -1,3 +1,7 @@
+/**
+ * Returns true if all elements of the list match the predicate, false if there are any that don't.
+ */
+
 function all(fun){
     return function(arr){
         let index = 0;

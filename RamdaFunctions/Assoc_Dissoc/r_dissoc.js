@@ -1,10 +1,6 @@
 function dissoc(ele, obj){
     var result = {...obj}
-    console.log('....')
-    console.log('ELE:')
-    console.log(ele)
-    console.log('obj')
-    console.log(obj)
+   
     if(Object.prototype.hasOwnProperty.call(result,ele)){
        
         delete result[ele]
